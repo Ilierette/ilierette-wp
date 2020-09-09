@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "outDir": "./",
+        "sourceMap": true,
+        "noImplicitAny": false,
+        "module": "commonjs",
+        "target": "es5",
+        "jsx": "react",
+        "experimentalDecorators": true,
+        "resolveJsonModule": true,
+        // This must be specified if "paths" is set
+        "baseUrl": "./src",
+        // Relative to "baseUrl"
+        "paths": {
+            "*": [
+                "*"
+            ]
+        }
+    },
+    "include": [
+        "./**/*"
+    ],
+    "exclude": [
+        "./node_modules/**/*"
+    ]
+}
