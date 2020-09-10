@@ -1,14 +1,12 @@
 import { SimpleComponent } from 'components/component';
-import { useStores } from 'contexts';
 import { useObserver } from 'mobx-react';
 import * as React from 'react';
-const axios = require('axios');
+import { useServices } from 'hooks/contexts';
 
 export const MainPage =() => {
-  const { globalCtx } = useStores();
-
+  const {wordpressService} = useServices();
   React.useEffect(()=>{
-    axios.get('http://a.ilierette.com/wp-json/wp/v2/posts').then((resp)=>{
+    wordpressService.getPages().then((resp)=>{
       console.log(resp.data)
     })
   })
@@ -16,7 +14,7 @@ export const MainPage =() => {
   return useObserver(() => (
     <>
       <h1>Welcome to MainPage!</h1>
-      <button onClick={globalCtx.changeColor}>Toggle color!!!!!!!!!!</button>
+      
 
       <SimpleComponent />
 

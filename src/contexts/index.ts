@@ -1,4 +1,7 @@
 import * as React from 'react'
-import storesContext from './storesContext'
+import WordpressService from 'api'
 
-export const useStores = () => React.useContext(storesContext)
+export const storesContext = React.createContext({})
+export const servicesContext = React.createContext({
+    wordpressService: WordpressService()
+})
