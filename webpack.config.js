@@ -18,6 +18,7 @@ module.exports = function () {
 
         output: {
             filename: "[name].js",
+            path: __dirname + '/react/'
         },
 
         // Enable sourcemaps for debugging webpack's output.
