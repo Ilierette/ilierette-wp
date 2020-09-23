@@ -19,12 +19,12 @@ export const LandingPage = () => {
               </button>
           </div>
           <div className="socials">
-            <button className="btn btn-primary social-button"><img src={require('../images/icons/instagram.svg')} className="btn-icon" /></button>
-            <button className="btn btn-primary social-button"><img src={require('../images/icons/discord.svg')} className="btn-icon" /></button>
-            <button className="btn btn-primary social-button"><img src={require('../images/icons/youtube.svg')} className="btn-icon" /></button>
-            <button className="btn btn-primary social-button"><img src={require('../images/icons/instagram.svg')} className="btn-icon" /></button>
-            <button className="btn btn-primary social-button"><img src={require('../images/icons/artstation.svg')} className="btn-icon" /></button>
-            <Link to='/blog/' className="btn btn-primary social-button"><img src={require('../images/icons/wordpress.svg')} className="btn-icon" /></Link>
+            <button className="btn btn-primary"><img src={require('../images/icons/instagram.svg')} className="btn-icon" /></button>
+            <button className="btn btn-primary"><img src={require('../images/icons/discord.svg')} className="btn-icon" /></button>
+            <button className="btn btn-primary"><img src={require('../images/icons/youtube.svg')} className="btn-icon" /></button>
+            <button className="btn rainbow-button"><img src={require('../images/icons/instagram.svg')} className="btn-icon" /></button>
+            <button className="btn rainbow-button"><img src={require('../images/icons/artstation.svg')} className="btn-icon" /></button>
+            <Link to='/blog/' className="btn btn-primary"><img src={require('../images/icons/wordpress.svg')} className="btn-icon" /></Link>
           </div>
           <div className="description mt-4">email: ilierette@gmail.com</div>
         </div>
