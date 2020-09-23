@@ -1,13 +1,13 @@
 @import "global";
 
 .landing-container{
-    background: url('../images/v685-adj-50-goldfloral_1.jpg') no-repeat;
+    background: url('../images/pexels-irina-iriser-1420008.jpg') no-repeat;
     background-size: cover;
     background-position: 100%;
     height: 100vh;
     display: flex;
     .card{
-        width: 45%;
+        max-width: 600px;
         margin: auto;
         text-align: center;
     }
