@@ -11,9 +11,10 @@ export const LandingPage = () => {
         <div className="card-body">
           <h1>Ilierette</h1>
           <div className="description mb-4">Dancing nerd | Stage girl | Digital artist</div>
-          <img src={require("../images/avatar.jpg")} className="card-img-inner"/>
+          <img src={require("../images/avatar.jpg")} className="card-img-inner" />
           <div className="socials">
-            <button className="btn btn-primary w-100"> Watch lifestream </button>
+
+            <button className="btn btn-primary w-100"><i className="fab fa-twitch"></i> Watch stream </button>
           </div>
 
 
