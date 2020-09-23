@@ -7,7 +7,7 @@
     height: 100vh;
     display: flex;
     .card{
-        max-width: 600px;
+        max-width: 500px;
         margin: auto;
         text-align: center;
     }
@@ -28,10 +28,23 @@
     }
     .socials{
         margin-top: 20px;
-        padding: 20px
+        padding: 0 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
     .card-img-inner{
         margin-left: -21px;
         width: calc(100% + 42px);
+    }
+    .btn-icon{
+        filter: invert(1);
+        width: 30px;
+    }
+    .social-button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
     }
 }
