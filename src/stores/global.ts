@@ -1,18 +1,9 @@
 import { observable } from "mobx";
 
 class GlobalStore {
-    @observable color = "#007bff";
+    @observable menu = null;
+    @observable loading = true;
 
-    changeColor = () => {
-        switch(this.color) {
-            case "#007bff":
-                this.color = "#28a745";
-                break;
-            default:
-                this.color = "#007bff";
-                break;
-        }
-    }
 }
 
 const global = new GlobalStore();

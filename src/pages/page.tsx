@@ -1,11 +1,13 @@
-import { SimpleComponent } from 'components/component';
 import { useObserver } from 'mobx-react';
 import * as React from 'react';
-import { useServices } from 'hooks/contexts';
 import { Link } from 'react-router-dom';
+import { NavHeader } from 'components/header';
+import "scss/main.scss";
 
 export const Page = (props) => {
   return useObserver(() => (
+    <>
+    <NavHeader />
     <div className="container">
       <div className="row">
         <div className="col-12">
@@ -15,5 +17,6 @@ export const Page = (props) => {
         </div>
       </div>
     </div>
+    </>
   ))
 }

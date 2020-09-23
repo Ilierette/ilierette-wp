@@ -1,8 +1,22 @@
-$primary: #3F704D;
+$primary: #2196f3;
 $radius: 0;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+body, html, #root {
+    height: 100%;
+}
+
 body {
     color: #000;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+.ultra-light{
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h1{
+    font-family: 'Kaushan Script', cursive;
 }

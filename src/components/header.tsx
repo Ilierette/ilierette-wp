@@ -1,28 +1,17 @@
 
 import * as React from 'react';
-import { useServices } from 'hooks/contexts';
-import { useObserver, useLocalStore } from 'mobx-react';
+import { useStores } from 'hooks/contexts';
+import { useObserver } from 'mobx-react';
 import { NavLink } from 'react-router-dom';
 
 export const NavHeader = () => {
-    const { wordpressService } = useServices();
-    const state = useLocalStore(() => ({
-        menu: null,
-        loading: true
-    }))
-    React.useEffect(() => {
-        wordpressService.getMenu().then((resp) => {
-            state.menu = resp.data
-            state.loading = false
-        })
-    }, [])
+    const { globalCtx } = useStores();
     return useObserver(() => (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            {state.loading ? <div>Loading</div> :
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
                         {
-                            state.menu.map((menu) => {
+                            globalCtx.menu.map((menu) => {
                                 let link = ""
                                 menu.url.split('/').map((url, id) => {
                                     if (id > 2 && url.length > 1) {
@@ -40,7 +29,7 @@ export const NavHeader = () => {
                         }
                     </ul>
                 </div>
-            }
+            
         </nav>
     ))
 }
