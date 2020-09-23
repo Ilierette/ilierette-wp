@@ -17,26 +17,30 @@ export const NavHeader = () => {
         })
     }, [])
     return useObserver(() => (
-        <header>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
             {state.loading ? <div>Loading</div> :
-                <div>
-                    {
-                        state.menu.map((menu) => {
-                            let link = ""
-                            menu.url.split('/').map((url, id) => {
-                                if (id > 2 && url.length > 1) {
-                                    link = link + "/" + url
-                                }
+                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul className="navbar-nav mr-auto">
+                        {
+                            state.menu.map((menu) => {
+                                let link = ""
+                                menu.url.split('/').map((url, id) => {
+                                    if (id > 2 && url.length > 1) {
+                                        link = link + "/" + url
+                                    }
+                                })
+                                return (
+                                    <li className="nav-item">
+                                        <NavLink className={"nav-link"} to={link} key={menu.ID}>
+                                            {menu.title}
+                                        </NavLink>
+                                    </li>
+                                )
                             })
-                            return (
-                                <NavLink to={link} key={menu.ID}>
-                                    {menu.title}
-                                </NavLink>
-                            )
-                        })
-                    }
+                        }
+                    </ul>
                 </div>
             }
-        </header>
+        </nav>
     ))
 }

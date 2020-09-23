@@ -1,16 +1,12 @@
-import { SimpleComponent } from 'components/component';
 import * as React from 'react';
-import { useServices } from 'hooks/contexts';
 import { useObserver } from 'mobx-react';
+import { Link } from 'react-router-dom';
 
 export const LandingPage = () => {
   return useObserver(() => (
     <>
       <h1>Welcome to Lading!</h1>
-
-
-      <SimpleComponent />
-
+      <Link to='/blog/'>Recent blog posts</Link>
     </>
   ))
 }

@@ -5,16 +5,15 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import "scss/main.scss";
 import { LandingPage } from 'pages/landing';
 import { BlogPage } from 'pages/blog';
-import { Page } from 'pages/page';
-import { CategoryPage } from 'pages/category';
 import { ArticlePage } from 'pages/article';
+import { CategoryPage } from 'pages/category';
+import { Page } from 'pages/page';
 require('offline-plugin/runtime').install();
 
 const App = () => {
-  console.log(window.location.pathname)
   return (
     <BrowserRouter>
-      {window.location.pathname != '/' && <NavHeader />}
+      <NavHeader />
       <Switch>
         <Route path="/" exact component={LandingPage} />
         <Route path="/blog" component={BlogPage} />
