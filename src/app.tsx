@@ -11,9 +11,10 @@ import { ArticlePage } from 'pages/article';
 require('offline-plugin/runtime').install();
 
 const App = () => {
+  console.log(window.location.pathname)
   return (
     <BrowserRouter>
-      <NavHeader />
+      {window.location.pathname != '/' && <NavHeader />}
       <Switch>
         <Route path="/" exact component={LandingPage} />
         <Route path="/blog" component={BlogPage} />
