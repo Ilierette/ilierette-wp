@@ -2,7 +2,7 @@ import Axios from 'axios'
 
 export default function WordpressService() {
     const axios = Axios.create({
-        baseURL: 'http://a.ilierette.com/wp-json',
+        baseURL: 'http://ilierette.com/wp-json',
         timeout: 30000
     })
     return {
@@ -68,6 +68,9 @@ export default function WordpressService() {
         },
         getPlugins: () => {
             return axios.get('/wp/v2/plugins')
+        },
+        getMenu: () => {
+            return axios.get('/wp/v2/menu')
         }
     }
 }
