@@ -21,6 +21,7 @@ body {
 #root{
     display: flex;
     overflow: hidden;
+    flex-direction: column;
 }
 
 .loading{
