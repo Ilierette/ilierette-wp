@@ -1,14 +1,14 @@
 <!DOCTYPE HTML>
 <html <?php language_attributes() ?>>
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4J68X0N280"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-177538739-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-4J68X0N280');
+  gtag('config', 'UA-177538739-1');
 </script>
 <meta charset="<?php bloginfo('charset') ?>" />
 <?php wp_head() ?>
