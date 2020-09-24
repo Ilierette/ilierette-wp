@@ -23,7 +23,7 @@ const App = () => {
   }, [])
   return useObserver(() => (
     <>
-      {globalCtx.loading ? <div>Loading</div> :
+      {globalCtx.loading ? <div className="loading"></div> :
         <BrowserRouter>
           <Switch>
             <Route path="/" exact component={LandingPage} />

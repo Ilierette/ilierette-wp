@@ -5,13 +5,45 @@ $radius: 0;
 
 body, html, #root {
     height: 100%;
+    width: 100%;
 }
 
 body {
     color: #000;
     font-family: 'Open Sans', sans-serif;
-    
+    background: url('../images/pexels-irina-iriser-1420008.jpg') no-repeat;
+    background-size: cover;
+    background-position: 100%;
+    height: 100vh;
+    display: flex;
 }
+
+#root{
+    display: flex;
+    overflow: hidden;
+}
+
+.loading{
+    background: url('../images/icons/spinner.svg') no-repeat;
+    filter: invert(1);
+    height: 100px;
+    width: 100px;
+    animation-name: rotate;
+    animation-duration:3s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+    margin: auto;
+}
+
+    @-webkit-keyframes rotate {
+        from {-webkit-transform:rotate(0deg);}
+        to {  -webkit-transform:rotate(360deg);}
+    }
+  
+    @-moz-keyframes rotate {
+        from {-moz-transform:rotate(0deg);}
+        to {  -moz-transform:rotate(360deg);}
+    }
 
 .ultra-light{
     font-family: 'Open Sans Condensed', sans-serif;

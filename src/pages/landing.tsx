@@ -6,7 +6,6 @@ import "scss/landing.scss";
 export const LandingPage = () => {
   return useObserver(() => (
     <div className="landing-container">
-
       <div className="card mx-auto">
         <div className="card-body">
           <h1>Ilierette</h1>
