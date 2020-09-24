@@ -7,27 +7,26 @@
     height: 100vh;
     display: flex;
     .card{
-        max-width: 500px;
+        max-width: 375px;
         margin: auto;
         text-align: center;
     }
     h1{
-        font-size: 4.5rem;
+        font-size: 4rem;
         font-family: 'Kaushan Script', cursive;
     }
     .description{
         color: #000;
-        font-size: 1.1rem;
         text-transform: uppercase;
         font-weight: 700;
     }
     .btn{
         text-transform: uppercase;
         font-weight: 700;
-        font-size: 2rem;
+        font-size: 1.3rem;
     }
     .socials{
-        margin-top: 20px;
+        margin-top: 10px;
         padding: 0 20px;
         display: flex;
         flex-wrap: wrap;
@@ -47,38 +46,8 @@
         align-items: center;
         
     }
-}
 
-.rainbow-button {
-    background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
-    border-radius:5px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-transform:uppercase;
-    font-size:3vw;
-    font-weight:bold;
-    position: relative;
-  }
-  .rainbow-button:before {
-    content:"";
-    background-color:#191919;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    width: calc(100% - 4px);
-    height: calc(100% - 4px);
-  }
-  .rainbow-button:hover {
-    animation:slidebg 2s linear infinite;
-  }
-  
-  @keyframes slidebg {
-    to {
-      background-position:20vw;
+    .btn-large{
+        width: calc(100% - 91px);
     }
-  }
+}
