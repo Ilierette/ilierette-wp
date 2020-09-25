@@ -12,7 +12,7 @@ export const LandingPage = () => {
           <div className="description mb-4">Dancing nerd | Stage girl <br/> Digital artist | React.js developer</div>
           <img src={require("../images/avatar.jpg")} className="card-img-inner" />
           <div className="socials">
-            <a target="/blank" href="https://www.twitch.tv/ilieret" className="btn btn-primary social-button">
+            <a target="/blank" href="https://www.twitch.tv/ilieret" className="btn btn-primary social-button two-buttons">
               <div><img src={require('../images/icons/twitch.svg')} className="btn-icon mr-3" /></div>
               <div>Watch stream</div>
             </a>
@@ -20,7 +20,7 @@ export const LandingPage = () => {
           </div>
           <div className="socials">
             <a target="/blank" href="https://www.instagram.com/ilierette/" className="btn btn-primary"><img src={require('../images/icons/instagram.svg')} className="btn-icon" /></a>
-            <a target="/blank" href="https://www.instagram.com/ilierette.art/" className="btn btn-primary social-button">
+            <a target="/blank" href="https://www.instagram.com/ilierette.art/" className="btn btn-primary social-button three-buttons">
               <div className="mr-3"><img src={require('../images/icons/instagram.svg')} className="btn-icon" /></div>
               <div> ART </div>
             </a>
