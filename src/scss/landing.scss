@@ -1,58 +1,183 @@
-@import "global";
+$bg-color: #E6E5E1;
+$shdow-gray: #d3d3d5;
+$primary: #0E3328;
 
-.landing-container{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    .card{
-        max-width: 400px;
-        margin: auto;
-        text-align: center;
-    }
-    h1{
-        font-size: 4rem;
-        font-family: 'Kaushan Script', cursive;
-    }
-    .description{
-        color: #000;
-        text-transform: uppercase;
-        font-weight: 700;
-    }
-    .btn{
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: 1.3rem;
-    }
-    .socials{
-        margin-top: 10px;
-        padding: 0 20px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    .card-img-inner{
-        margin-left: -21px;
-        width: calc(100% + 42px);
-    }
-    .btn-icon{
-        filter: invert(1);
-        width: 30px;
-    }
-    .social-button{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    .two-buttons{
-        width: calc(100% - 67px);
-    }
-    .three-buttons{
-        width: calc(100% - 198px);
+i {
+  opacity: 0;
+  font-size: 18px;
+  color: #fff;
+  will-change: transform;
+  -webkit-transform: scale(0.1);
+  transform: scale(0.1);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+h2{
+  pointer-events:none;
+}
+
+.landing {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .card {
+    margin-top: 15px;
+    position: relative;
+    width: calc(100% - 10px);
+    height: 250px;
+    background-color: #fff;
+    border:none;
+    overflow: hidden;
+    margin-bottom: 4px;
+
+    @media (min-width: 576px) {
+        width: 500px;
     }
 
-    .btn-large{
-        width: calc(100% - 91px);
+    h2 {
+      z-index: 99;
+      position: absolute;
+      bottom: 0;
+      right: 80px;
+      font-size: 60px;
+      font-weight: 700;
+      color: #fff;
+      @media (min-width: 576px) {
+        right: 130px;
     }
+    }
+
+    .fa-arrow-right {
+      z-index: 100;
+      position: absolute;
+      right: 16px;
+      bottom: 25px;
+      font-size: 40px;
+      opacity: 0;
+      text-shadow: none !important;
+      @media (min-width: 576px) {
+        right: 45px;
+        opacity: 1;
+      }
+    }
+
+    p {
+      z-index: 99;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: #333;
+      opacity: 0.7;
+      font-size: 12px;
+      letter-spacing: 1px;
+      writing-mode: vertical-lr;
+      -webkit-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+      @media (min-width: 576px) {
+        right: 70px;
+      }
+    }
+    .pic {
+      z-index: 100;
+      width: calc(100% - 50px);
+      height: 250px;
+      background-size: 100% 100%;
+      filter: grayscale(100%);
+      z-index: auto;
+      img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+      @media (min-width: 576px) {
+        width: 400px;
+      }
+    }
+
+    .social {
+      position: absolute;
+      left: 5px;
+      top: 0;
+      display: flex;
+      align-items: center;
+      width: 180px;
+      height: 64px;
+      border-radius: 80px;
+      z-index: 1;
+    }
+
+    i {
+      font-size: 1.3rem;
+      margin-left: 15px;
+      opacity: 1;
+      transform: scale(1);
+      text-shadow: 0px 0px 10px $primary;
+      @media (min-width: 576px) {
+        margin-left: 25px;
+      }
+    }
+
+    .button {
+      position: absolute;
+      right: 14px;
+      bottom: 14px;
+      width: 30px;
+      height: 30px;
+      background-color: $primary;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      outline:none;
+      transition: all 0.3s ease;
+      mix-blend-mode: hard-light;
+
+      i {
+        font-size: 3rem;
+      }
+    }
+
+    &:hover .button {
+      transform: scale(16.5);
+    }
+
+    &:hover p {
+      color: #fff;
+    }
+    
+    &:hover .pic {
+      filter: grayscale(0);
+      
+    }
+    &:hover i{
+        opacity: 1;
+    }
+  }
+}
+
+.dr {
+  position: absolute;
+  bottom: 16px; 
+  right: 16px;
+  width:100px;
+}
+
+
+html{
+    margin-top: 0 !important;
 }

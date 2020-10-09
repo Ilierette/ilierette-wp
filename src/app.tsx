@@ -23,7 +23,7 @@ const App = () => {
   }, [])
   return useObserver(() => (
     <>
-      {globalCtx.loading ? <div className="loading"></div> :
+      {globalCtx.loading ? <div className="loading"><i className="fas fa-atom fa-spin fa-10x"></i></div> :
         <BrowserRouter>
           <Switch>
             <Route path="/" exact component={LandingPage} />

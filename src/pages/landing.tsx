@@ -5,35 +5,51 @@ import "scss/landing.scss";
 
 export const LandingPage = () => {
   return useObserver(() => (
-    <div className="landing-container">
-      <div className="card mx-auto">
-        <div className="card-body">
-          <h1>Ilierette</h1>
-          <div className="description mb-4">Dancing nerd | Stage girl <br/> Digital artist | React.js developer</div>
-          <img src={require("../images/avatar.jpg")} className="card-img-inner" />
-          <div className="socials">
-            <a target="/blank" href="https://www.twitch.tv/ilieret" className="btn btn-primary social-button two-buttons">
-              <div><img src={require('../images/icons/twitch.svg')} className="btn-icon mr-3" /></div>
-              <div>Watch stream</div>
-            </a>
-            <a target="/blank" href="https://www.youtube.com/channel/UCNkgXz2HcVk4KGMRnpD4rnQ/videos" className="btn btn-primary"><img src={require('../images/icons/youtube.svg')} className="btn-icon" /></a>
+    <div className="landing">
+      <div className="container">
+        <div className="card">
+          <h2>Stream</h2>
+          <i className="fas fa-arrow-right"></i>
+          <p>Dancing nerd</p>
+          <div className="pic">
+            <img src={require('../images/card-1.jpg')} />
           </div>
-          <div className="socials">
-            <a target="/blank" href="https://www.instagram.com/ilierette/" className="btn btn-primary"><img src={require('../images/icons/instagram.svg')} className="btn-icon" /></a>
-            <a target="/blank" href="https://www.instagram.com/ilierette.art/" className="btn btn-primary social-button three-buttons">
-              <div className="mr-3"><img src={require('../images/icons/instagram.svg')} className="btn-icon" /></div>
-              <div> ART </div>
-            </a>
-            <a target="/blank" href="https://www.artstation.com/ilierette" className="btn btn-primary"><img src={require('../images/icons/artstation.svg')} className="btn-icon" /></a>
-            <a target="/blank" href="https://discord.com/invite/RHfP7tj" className="btn btn-primary"><img src={require('../images/icons/discord.svg')} className="btn-icon" /></a>
+          <div className="social">
+            <a target="/blank" href="https://www.instagram.com/ilierette/"><i className="fab fa-instagram"></i></a>
+            <a target="/blank" href="https://discord.com/invite/RHfP7tj"><i className="fab fa-discord"></i></a>
+            <a target="/blank" href="https://www.twitch.tv/ilieret"><i className="fab fa-twitch"></i></a>
+            <a target="/blank" href="https://www.youtube.com/channel/UCNkgXz2HcVk4KGMRnpD4rnQ/videos"><i className="fab fa-youtube"></i></a>
+            <a target="/blank" href="https://facebook.com/ilierette/"><i className="fab fa-facebook-f"></i></a>
           </div>
-          <div className="socials">
-            <a target="/blank" href="https://www.facebook.com/ilierette/" className="btn btn-primary"><img src={require('../images/icons/facebook.svg')} className="btn-icon" /></a>
-            <a target="/blank" href="https://www.linkedin.com/in/ilierette/" className="btn btn-primary"><img src={require('../images/icons/linkedin.svg')} className="btn-icon" /></a>
-            <Link to='/blog/' className="btn btn-primary"><img src={require('../images/icons/wordpress.svg')} className="btn-icon" /></Link>
-            <a target="/blank" href="https://github.com/Ilierette" className="btn btn-primary"><img src={require('../images/icons/github.svg')} className="btn-icon" /></a>
-            <a target="/blank" href="https://twitter.com/ilierette" className="btn btn-primary"><img src={require('../images/icons/twitter.svg')} className="btn-icon" /></a>
+          <a target="/blank" className="button" href="https://www.twitch.tv/ilieret"></a>
+        </div>
+        <div className="card">
+          <h2>Art</h2>
+          <i className="fas fa-arrow-right"></i>
+          <p>Digital artist</p>
+          <div className="pic">
+            <img src={require('../images/card-2.jpg')} />
           </div>
+          <div className="social">
+            <a target="/blank" href="https://www.instagram.com/ilierette.art/"><i className="fab fa-instagram"></i></a>
+            <a target="/blank" href="https://www.artstation.com/ilierette"><i className="fab fa-artstation"></i></a>
+          </div>
+          <a target="/blank" className="button"  href="https://www.artstation.com/ilierette"></a>
+        </div>
+        <div className="card">
+          <h2>React.js</h2>
+          <i className="fas fa-arrow-right"></i>
+          <p>Developer</p>
+          <div className="pic">
+            <img src={require('../images/card-3.png')} />
+          </div>
+          <div className="social">
+            <a target="/blank" href="https://www.linkedin.com/in/ilierette/"><i className="fab fa-linkedin"></i></a>
+            <a target="/blank" href="https://www.instagram.com/ilierette.dev/"><i className="fab fa-instagram"></i></a>
+            <a target="/blank" href="https://github.com/Ilierette"><i className="fab fa-github"></i></a>
+            <a target="/blank" href="https://twitter.com/ilierette"><i className="fab fa-twitter"></i></a>
+          </div>
+          <a target="/blank" className="button" href="https://ilierette.github.io/ilierette/"></a>
         </div>
       </div>
     </div>
