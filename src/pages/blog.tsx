@@ -6,7 +6,7 @@ import "scss/main.scss";
 
 export const BlogPage = () => {
   return useObserver(() => (
-    <>
+    <main>
       <NavHeader />
       <div className="container">
         <div className="row">
@@ -17,6 +17,6 @@ export const BlogPage = () => {
           </div>
         </div>
       </div>
-    </>
+    </main>
   ))
 }

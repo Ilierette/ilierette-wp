@@ -18,8 +18,8 @@ export default function WordpressService() {
         getTags: () => {
             return axios.get('/wp/v2/tags')
         },
-        getPages: () => {
-            return axios.get('/wp/v2/pages')
+        getPages: (slug:string) => {
+            return axios.get('/wp/v2/pages?slug='+ slug)
         },
         getPagesRevisions: (id: string) => {
             return axios.get('/wp/v2/pages/' + id + '/revisions')
